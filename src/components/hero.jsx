@@ -15,7 +15,7 @@ export default () => (
       Organize your workflow, collaborate with your team, and hit your deadlines without breaking a sweat. Everything you need, right where you need it.
     </p>
     <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-      <a href="https://github.com/RishabhGupta777/task_manager/releases/tag/v1.0" className="bg-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-700 shadow-lg transition transform hover:-translate-y-1">
+      <a href="https://github.com/RishabhGupta777/task_manager/releases/download/v1.0/app-release.apk" className="bg-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-700 shadow-lg transition transform hover:-translate-y-1">
         Start for Free
       </a>
       <a href="#features" className="bg-white text-gray-800 px-8 py-4 rounded-full font-bold text-lg border border-gray-200 hover:bg-gray-50 shadow-sm transition">
