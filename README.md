@@ -1,16 +1,47 @@
-# React + Vite
+This is a React project powered by Vite.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Prerequisites
+Ensure you have Node.js installed (version 18.x or higher recommended).
 
-Currently, two official plugins are available:
+Installation
+Install the project dependencies using your preferred package manager:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Bash
+npm install
+# OR
+yarn install
+# OR
+pnpm install
+Available Scripts
+In the project directory, you can run:
 
-## React Compiler
+npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Starts the development server. Vite provides Hot Module Replacement (HMR), meaning your changes will reflect instantly in the browser without a full reload.
 
-## Expanding the ESLint configuration
+npm run build
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Compiles your application into optimized static files for production. These files will be generated in the dist/ folder.
+
+Important: If you are deploying to Vercel, ensure your build output directory is set to dist.
+
+npm run preview
+
+Runs the locally built version of your application (after running npm run build). This is useful to verify your production build before deploying.
+
+Troubleshooting: SPA Routing
+If you encounter 404 errors when refreshing the page on non-root routes (e.g., /about), ensure you have a vercel.json file in your root directory to handle client-side routing:
+
+JSON
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+Deployment
+This project is configured to deploy seamlessly to Vercel. Simply push your changes to your Git repository, and Vercel will trigger a new build and deployment automatically.
+
+Would you like me to add a section about environment variables or how to set up Husky for pre-commit linting?
